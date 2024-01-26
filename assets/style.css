@@ -59,6 +59,22 @@ input {
   border-radius: 5px;
 }
 
+input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: goldenrod;
+}
+
 .button {
   background-color: #303030;
   padding: 5px 15px;
@@ -108,6 +124,10 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+  body {
+    min-height: 50vh;
+  }
+
   .input-mobile,
   .footer-mobile {
     flex-direction: column;
