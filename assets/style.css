@@ -71,8 +71,10 @@ footer {
   padding: 15px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .input-mobile {
     flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 5px;
   }
 }
