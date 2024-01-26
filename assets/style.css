@@ -72,9 +72,13 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  .input-mobile {
+  .input-mobile,
+  .footer-mobile {
     flex-direction: column;
-    margin-right: 0;
+  }
+
+  .mb-mobile {
     margin-bottom: 5px;
+    margin-right: 0 !important;
   }
 }
