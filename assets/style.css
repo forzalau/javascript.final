@@ -72,4 +72,7 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .input-mobile {
+    flex-direction: column;
+  }
 }
