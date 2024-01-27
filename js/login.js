@@ -1,6 +1,15 @@
 import { loginFormHTML, signupFormHTML } from "./form.js";
 
+function checkAuthentication() {
+  let storedUserData = JSON.parse(localStorage.getItem("userData"));
+  if (storedUserData && storedUserData.username && storedUserData.password) {
+    window.location.href = "page/store.html";
+  }
+}
+
 function login() {
+  /*checkAuthentication();*/
+
   let panel = document.getElementById("loginFormContainer");
   panel.innerHTML = loginFormHTML;
 
@@ -31,6 +40,8 @@ function login() {
 }
 
 function signup() {
+  /*checkAuthentication();*/
+
   let panel = document.getElementById("signupFormContainer");
   panel.innerHTML = signupFormHTML;
 
@@ -51,15 +62,12 @@ function signup() {
         password: newPassword,
       };
       localStorage.setItem("userData", JSON.stringify(userData));
-
-      Swal.fire({
-        title: "",
-        text: "Cuenta creada con éxito. ¡Ya podés iniciar sesión!",
-        icon: "success",
-        heightAuto: false,
-      });
       panel.innerHTML =
-        '<div class="text-center"><h1 class="py-3">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Te enviaremos los detalles del registro a tu correo.</h3></div>';
+        '<div class="text-center"><h1><i class="fa-solid fa-circle-notch fa-spin" style="color: goldenrod;"></i></h1></div>';
+      setTimeout(() => {
+        panel.innerHTML =
+          '<div class="text-center"><h1 class="py-3" style="color: seagreen;">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Te enviaremos los detalles del registro a tu correo.</h3></div>';
+      }, 3000);
     } else {
       Swal.fire({
         title: "Error",
