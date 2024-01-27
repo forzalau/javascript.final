@@ -77,8 +77,8 @@ function signup() {
         '<div class="text-center"><h1><i class="fa-solid fa-circle-notch fa-spin" style="color: goldenrod;"></i></h1></div>';
       setTimeout(() => {
         panel.innerHTML =
-          '<div class="text-center"><h1 class="py-3" style="color: seagreen;">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Te enviaremos los detalles del registro a tu correo.</h3></div>';
-      }, 3000);
+          '<div class="text-center"><h1 class="py-3" style="color: seagreen;">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Te enviaremos los detalles a tu correo.</h3></div>';
+      }, 2500);
     } else {
       Swal.fire({
         title: "Error",
