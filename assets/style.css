@@ -60,6 +60,7 @@ input {
 }
 
 input[type="checkbox"] {
+  background-color: white;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -75,8 +76,11 @@ input[type="checkbox"]:checked {
   background-color: goldenrod;
 }
 
-.button {
+button {
   background-color: #303030;
+  color: white;
+  width: 100%;
+  border: none;
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -124,10 +128,6 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  body {
-    min-height: 50vh;
-  }
-
   .input-mobile,
   .footer-mobile {
     flex-direction: column;

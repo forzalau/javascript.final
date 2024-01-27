@@ -6,6 +6,10 @@
     <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>DrinkStore / E-commerce</title>
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
@@ -30,25 +34,7 @@
             <div class="box">
               <h3 class="text-center">Ya tengo cuenta</h3>
               <hr />
-              <div class="text-center">
-                <input
-                  type="text"
-                  class="mb-2"
-                  placeholder="Usuario"
-                  maxlength="12"
-                  required
-                />
-                <input
-                  type="password"
-                  class="mb-3"
-                  placeholder="Contraseña"
-                  required
-                />
-                <div class="button mb-1">Ingresar</div>
-                <a href="#">
-                  <small>(Olvidé mi contraseña)</small>
-                </a>
-              </div>
+              <div id="loginFormContainer"></div>
             </div>
           </div>
 
@@ -58,41 +44,7 @@
                 ¿Todavía no estás registrad@?
               </h3>
               <hr style="color: goldenrod" />
-              <div class="d-flex justify-content-center input-mobile mb-1">
-                <input
-                  type="text"
-                  class="me-1 margin-mobile"
-                  placeholder="Nombre de Usuario"
-                  maxlength="12"
-                  required
-                />
-                <input type="email" placeholder="Escribe tu Email" required />
-              </div>
-              <div class="d-flex justify-content-center input-mobile mb-3">
-                <input
-                  type="password"
-                  class="me-1 margin-mobile"
-                  placeholder="Contraseña"
-                  required
-                />
-                <input
-                  type="password"
-                  placeholder="Repite tu contraseña"
-                  required
-                />
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-center mb-2"
-              >
-                <input type="checkbox" required />
-                <p class="ms-1">Declaro que soy mayor de 18 años.</p>
-              </div>
-              <div
-                class="button text-center"
-                style="background-color: goldenrod"
-              >
-                Crear cuenta
-              </div>
+              <div id="signupFormContainer"></div>
             </div>
           </div>
         </div>
@@ -125,7 +77,10 @@
         </div>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/login.js" type="module"></script>
+    <script src="./js/form.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script
       src="https://kit.fontawesome.com/9ba83664e2.js"
       crossorigin="anonymous"
