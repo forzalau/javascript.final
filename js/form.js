@@ -17,7 +17,7 @@ export let loginFormHTML = `
     />
     <button type="submit" class="mb-1">Ingresar</button>
     <a href="#">
-      <small>(Olvidé mi contraseña)</small>
+      <small id="forgotPassword">(Olvidé mi contraseña)</small>
     </a>
   </form>      
 `;

@@ -8,7 +8,7 @@ function checkAuthentication() {
 }
 
 function login() {
-  /*checkAuthentication();*/
+  checkAuthentication();
 
   let panel = document.getElementById("loginFormContainer");
   panel.innerHTML = loginFormHTML;
@@ -18,29 +18,40 @@ function login() {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let userName = document.querySelector("#userName").value;
+    let userName = document.querySelector("#userName").value.toLowerCase();
     let password = document.querySelector("#password").value;
     let storedUserData = JSON.parse(localStorage.getItem("userData"));
 
     if (
       storedUserData &&
-      userName === storedUserData.username &&
+      userName === storedUserData.username.toLowerCase() &&
       password === storedUserData.password
     ) {
       window.location.href = "page/store.html";
     } else {
       Swal.fire({
-        title: "Error de inicio de sesión",
-        text: "El usuario o la contraseña son incorrectas.",
+        title: "Error en el inicio de sesión",
+        text: "Los datos son incorrectos.",
         icon: "error",
         heightAuto: false,
       });
     }
   });
+
+  document
+    .getElementById("forgotPassword")
+    .addEventListener("click", function () {
+      Swal.fire({
+        title: "Lo sentimos",
+        text: "Esta función no se encuentra disponible.",
+        icon: "error",
+        heightAuto: false,
+      });
+    });
 }
 
 function signup() {
-  /*checkAuthentication();*/
+  checkAuthentication();
 
   let panel = document.getElementById("signupFormContainer");
   panel.innerHTML = signupFormHTML;
