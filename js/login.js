@@ -59,7 +59,7 @@ function signup() {
         heightAuto: false,
       });
       panel.innerHTML =
-        '<div class="text-center mb-1"><h4 style="color: seagreen;">¡Cuenta creada con éxito!</h4><br><h3>Enviamos los datos de registro a tu correo.</h3><br><h2 style="color: seagreen;">Ya podés iniciar sesión</h2></div>';
+        '<div class="text-center"><h1 class="py-3">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Te enviaremos los detalles del registro a tu correo.</h3></div>';
     } else {
       Swal.fire({
         title: "Error",
