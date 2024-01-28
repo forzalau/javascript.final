@@ -11,6 +11,7 @@ function sessionClose() {
     window.location.href = "../index.html";
   }
   document.getElementById("logOut").addEventListener("click", logout);
+  document.getElementById("logOutMobile").addEventListener("click", logout);
 }
 
 let storeHeaderHTML = `
@@ -40,9 +41,9 @@ let storeHeaderHTML = `
   
   <div class="menu-mobile-dropdown" id="menuDropdown">
     <div class="float-end">
-      <p class="menu-mobile-button">Notificaciones</p>
-      <p class="menu-mobile-button">Ver Carrito</p>
-      <p class="menu-mobile-button">UserName</p>
+      <p id="notificationButtonMobile" class="menu-mobile-button">Notificaciones</p>
+      <p id="cartButtonMobile" class="menu-mobile-button">Ver Carrito</p>
+      <p id="logOutMobile" class="menu-mobile-button">UserName</p>
     </div>
   </div>
 `;
@@ -56,38 +57,48 @@ storeHeader();
 storeCheckAuthentication();
 sessionClose();
 
-const cartButton = document.getElementById("cartButton");
-const cartShow = document.getElementById("cartShow");
+function setupCartButton(buttonId) {
+  const cartButton = document.getElementById(buttonId);
+  const cartShow = document.getElementById("cartShow");
 
-cartButton.addEventListener("click", () => {
-  cartShow.style.display =
-    cartShow.style.display === "none" || cartShow.style.display === ""
-      ? "block"
-      : "none";
+  cartButton.addEventListener("click", () => {
+    cartShow.style.display =
+      cartShow.style.display === "none" || cartShow.style.display === ""
+        ? "block"
+        : "none";
 
-  if (cartButton.style.backgroundColor === "seagreen") {
-    cartButton.style.backgroundColor = "";
-  } else {
-    cartButton.style.backgroundColor = "seagreen";
-  }
-});
+    if (cartButton.style.backgroundColor === "seagreen") {
+      cartButton.style.backgroundColor = "";
+    } else {
+      cartButton.style.backgroundColor = "seagreen";
+    }
+  });
+}
 
-const notificationButton = document.getElementById("notificationButton");
-const notificationShow = document.getElementById("notificationShow");
+setupCartButton("cartButton");
+setupCartButton("cartButtonMobile");
 
-notificationButton.addEventListener("click", () => {
-  notificationShow.style.display =
-    notificationShow.style.display === "none" ||
-    notificationShow.style.display === ""
-      ? "block"
-      : "none";
+function setupDynamicButton(buttonId) {
+  const button = document.getElementById(buttonId);
+  const notificationShow = document.getElementById("notificationShow");
 
-  if (notificationButton.style.backgroundColor === "goldenrod") {
-    notificationButton.style.backgroundColor = "";
-  } else {
-    notificationButton.style.backgroundColor = "goldenrod";
-  }
-});
+  button.addEventListener("click", () => {
+    notificationShow.style.display =
+      notificationShow.style.display === "none" ||
+      notificationShow.style.display === ""
+        ? "block"
+        : "none";
+
+    if (button.style.backgroundColor === "goldenrod") {
+      button.style.backgroundColor = "";
+    } else {
+      button.style.backgroundColor = "goldenrod";
+    }
+  });
+}
+
+setupDynamicButton("notificationButton");
+setupDynamicButton("notificationButtonMobile");
 
 const menuButton = document.getElementById("menuMobile");
 const dropdownMenu = document.getElementById("menuDropdown");
