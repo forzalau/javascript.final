@@ -40,7 +40,8 @@ let storeHeaderHTML = `
   </div>  
   
   <div class="menu-mobile-dropdown" id="menuDropdown">
-    <div class="float-end">
+  <hr>
+    <div class="text-center">
       <p id="notificationButtonMobile" class="menu-mobile-button">Notificaciones</p>
       <p id="cartButtonMobile" class="menu-mobile-button">Ver Carrito</p>
       <p id="logOutMobile" class="menu-mobile-button">UserName</p>
