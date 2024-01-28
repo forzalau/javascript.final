@@ -5,7 +5,7 @@ export let loginFormHTML = `
       id="userName"
       class="mb-2"
       placeholder="Usuario"
-      maxlength="12"
+      maxlength="8"
       required
     />
     <input
@@ -30,7 +30,7 @@ export let signupFormHTML = `
         id="newUserName"
         class="me-1 margin-mobile"
         placeholder="Nombre de Usuario"
-        maxlength="12"
+        maxlength="8"
         required
       />
       <input 

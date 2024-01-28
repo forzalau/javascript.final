@@ -1,4 +1,4 @@
-import { loginFormHTML, signupFormHTML } from "./form.js";
+import { loginFormHTML, signupFormHTML } from "./loginForm.js";
 
 function checkAuthentication() {
   let storedUserData = JSON.parse(localStorage.getItem("userData"));
@@ -77,7 +77,7 @@ function signup() {
         '<div class="text-center"><h1><i class="fa-solid fa-circle-notch fa-spin" style="color: goldenrod;"></i></h1></div>';
       setTimeout(() => {
         panel.innerHTML =
-          '<div class="text-center"><h1 class="py-3" style="color: seagreen;">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Te enviaremos los detalles a tu correo.</h3></div>';
+          '<div class="text-center"><h1 class="py-3" style="color: seagreen; font-weight: bold">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Enviaremos los detalles a tu correo.</h3></div>';
       }, 2500);
     } else {
       Swal.fire({

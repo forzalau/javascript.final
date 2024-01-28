@@ -45,6 +45,7 @@ main {
   display: flex;
   align-items: center; /* Centra verticalmente */
   height: 100vh;
+  padding-top: 15px;
 }
 
 .box {
@@ -86,11 +87,23 @@ button {
   cursor: pointer;
 }
 
+.btn-menu {
+  width: auto !important;
+}
+
 .cartMenu {
   background-color: seagreen;
   padding: 15px;
   box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
   display: none;
+}
+
+.notification {
+  background: linear-gradient(to right, gold, goldenrod, gold);
+  padding: 15px;
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 2;
 }
 
 .card-container {
@@ -120,6 +133,17 @@ button {
   padding: 0 15px;
   border-radius: 0 0 5px 5px;
   margin-bottom: 15px;
+}
+
+.offert-box {
+  background-color: seagreen;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.offer {
+  color: seagreen;
 }
 
 footer {

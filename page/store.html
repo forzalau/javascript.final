@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../assets/favicon.png" type="image/x-icon" />
-    <title>DrinkStore / E-commerce</title>
+    <title>DrinkStore - Envíos Gratis en el día</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,47 +19,73 @@
   </head>
   <body>
     <header>
-      <div class="container d-flex align-items-center">
-        <h1>DrinkStore</h1>
-        <img src="../assets/favicon.png" style="height: 45px" />
-      </div>
+      <div id="storeHeaderContainer"></div>
     </header>
+
+    <!-- NOTIFICACIÓN -->
+    <div id="notificationShow" class="notification">
+      <h6 class="text-center pt-2">
+        ¡Tenés un 20% de descuento en tu primera compra!
+      </h6>
+      <h5 class="text-center pb-2">Usando el código " <b>20DESCUENTO</b> "</h5>
+    </div>
+    <!-- CARRITO DE COMPRAS -->
+    <div id="cartShow" class="cartMenu">
+      <div id="cartContainer"></div>
+    </div>
 
     <main>
       <div class="container">
-        <button id="logOut">Cerrar sesión</button>
-        <div class="card-container">
-          <div class="card-img"></div>
-          <div class="card-text"></div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div id="0" class="card-container">
+              <div class="card-img">
+                <img
+                  src="https://http2.mlstatic.com/D_NQ_NP_2X_938442-MLA73958467108_012024-F.webp"
+                />
+              </div>
+              <div class="card-text">
+                <h5>
+                  Fernet Branca
+                  <small class="offert-box float-end">10% OFF</small>
+                </h5>
+                <small>x6 unidades</small>
+                <h4 class="offer pt-2">$ 57.000</h4>
+                <h5><s>$ 63.700</s></h5>
+              </div>
+            </div>
+
+            <div id="0" class="card-container">
+              <div class="card-img">
+                <img
+                  src="https://http2.mlstatic.com/D_NQ_NP_2X_938442-MLA73958467108_012024-F.webp"
+                />
+              </div>
+              <div class="card-text">
+                <h5>
+                  Fernet Branca
+                  <small class="offert-box float-end">10% OFF</small>
+                </h5>
+                <small>x6 unidades</small>
+                <h4 class="offer pt-2">$ 57.000</h4>
+                <h5><s>$ 63.700</s></h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
-    <footer class="mt-3">
-      <div class="container">
-        <div
-          class="d-flex justify-content-between footer-mobile align-items-center"
-        >
-          <div class="d-flex">
-            <a href="#empty">
-              <p class="me-3">Ayuda</p>
-            </a>
-            <a href="#empty">
-              <p class="me-3">Contacto</p>
-            </a>
-            <a href="#empty">
-              <p>Legales</p>
-            </a>
-          </div>
-          <div class="d-flex font-end">
-            <p class="me-1" style="color: goldenrod">DrinkStore</p>
-            <p>&copy; 2024</p>
-          </div>
-        </div>
-      </div>
+    <footer>
+      <div id="footerContainer"></div>
     </footer>
+
+    <!-- script -->
     <script src="../js/store.js"></script>
-    <script src="../js/script.js" type="module"></script>
+    <script src="../js/storeCart.js"></script>
+    <script src="../js/storeMain.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script
       src="https://kit.fontawesome.com/9ba83664e2.js"
       crossorigin="anonymous"
