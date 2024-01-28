@@ -120,14 +120,6 @@ button {
   display: none;
 }
 
-.notification {
-  background: linear-gradient(to right, gold, goldenrod, gold);
-  padding: 15px;
-  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 2;
-}
-
 .card-container {
   cursor: pointer;
   margin-bottom: 15px;

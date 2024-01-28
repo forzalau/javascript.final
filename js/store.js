@@ -5,15 +5,6 @@ function storeCheckAuthentication() {
   }
 }
 
-function sessionClose() {
-  function logout() {
-    localStorage.removeItem("userData");
-    window.location.href = "../index.html";
-  }
-  document.getElementById("logOut").addEventListener("click", logout);
-  document.getElementById("logOutMobile").addEventListener("click", logout);
-}
-
 let storeHeaderHTML = `
   <div class="container d-flex justify-content-between align-items-center">
     <div class="float-start d-flex align-items-center">
@@ -54,8 +45,31 @@ function storeHeader() {
   panel.innerHTML = storeHeaderHTML;
 }
 
-storeHeader();
+function sessionClose() {
+  function logout() {
+    Swal.fire({
+      title: "Cerrar sesión",
+      text: "¿Estás seguro?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, cerrar sesión",
+      cancelButtonText: "No",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("userData");
+        window.location.href = "../index.html";
+      }
+    });
+  }
+
+  document.getElementById("logOut").addEventListener("click", logout);
+  document.getElementById("logOutMobile").addEventListener("click", logout);
+}
+
 storeCheckAuthentication();
+storeHeader();
 sessionClose();
 
 function setupCartButton(buttonId) {
@@ -81,20 +95,13 @@ setupCartButton("cartButtonMobile");
 
 function setupDynamicButton(buttonId) {
   const button = document.getElementById(buttonId);
-  const notificationShow = document.getElementById("notificationShow");
 
   button.addEventListener("click", () => {
-    notificationShow.style.display =
-      notificationShow.style.display === "none" ||
-      notificationShow.style.display === ""
-        ? "block"
-        : "none";
-
-    if (button.style.backgroundColor === "goldenrod") {
-      button.style.backgroundColor = "";
-    } else {
-      button.style.backgroundColor = "goldenrod";
-    }
+    Swal.fire({
+      text: 'Tenés un 20% de descuento en tu primera compra utilizando el código "20DESCUENTO"',
+      icon: "success",
+      confirmButtonText: "¡Gracias!",
+    });
   });
 }
 
