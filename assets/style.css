@@ -91,6 +91,27 @@ button {
   width: auto !important;
 }
 
+#menuMobile {
+  display: none;
+}
+
+.menu-mobile-dropdown {
+  display: none;
+  z-index: 99;
+}
+
+.menu-mobile-dropdown.show {
+  display: block;
+}
+
+.menu-mobile-button {
+  background-color: #303030;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
 .cartMenu {
   background-color: seagreen;
   padding: 15px;
@@ -152,6 +173,14 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+  .menu-nav {
+    display: none;
+  }
+
+  #menuMobile {
+    display: block;
+  }
+
   .input-mobile,
   .footer-mobile {
     flex-direction: column;

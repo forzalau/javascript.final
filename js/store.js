@@ -20,18 +20,31 @@ let storeHeaderHTML = `
       <img src="../assets/favicon.png" style="height: 45px" />
     </div>
     <div class="float-end d-flex align-items-center">
-      <button id="notificationButton" class="btn-menu me-1">
-        <i class="fa-solid fa-bell fa-shake"></i>
-      </button>
-      <button id="cartButton" class="btn-menu me-1">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </button>
-      <button id="logOut" class="btn-menu me-1">
-        <i class="fa-solid fa-user"></i>
-        <i>username</i>
+      <div class="menu-nav">
+        <button id="notificationButton" class="btn-menu me-1">
+          <i class="fa-solid fa-bell fa-shake"></i>
+        </button>
+        <button id="cartButton" class="btn-menu me-1">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button id="logOut" class="btn-menu me-1" style="padding: 5px 10px">
+          <i class="fa-solid fa-user me-1"></i>
+          <i>username</i>
+        </button>
+      </div>
+      <button id="menuMobile" class="btn-menu">
+        <i class="fa-solid fa-bars"></i>
       </button>
     </div>
-  </div>     
+  </div>  
+  
+  <div class="menu-mobile-dropdown" id="menuDropdown">
+    <div class="float-end">
+      <p class="menu-mobile-button">Notificaciones</p>
+      <p class="menu-mobile-button">Ver Carrito</p>
+      <p class="menu-mobile-button">UserName</p>
+    </div>
+  </div>
 `;
 
 function storeHeader() {
@@ -74,4 +87,11 @@ notificationButton.addEventListener("click", () => {
   } else {
     notificationButton.style.backgroundColor = "goldenrod";
   }
+});
+
+const menuButton = document.getElementById("menuMobile");
+const dropdownMenu = document.getElementById("menuDropdown");
+
+menuButton.addEventListener("click", function () {
+  dropdownMenu.classList.toggle("show");
 });
