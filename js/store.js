@@ -99,7 +99,6 @@ function setupDynamicButton(buttonId) {
   button.addEventListener("click", () => {
     Swal.fire({
       text: 'Tenés un 20% de descuento en tu primera compra utilizando el código "20DESCUENTO"',
-      icon: "success",
       confirmButtonText: "¡Gracias!",
       confirmButtonColor: "goldenrod",
     });

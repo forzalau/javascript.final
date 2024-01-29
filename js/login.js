@@ -89,7 +89,7 @@ function signup() {
         '<div class="text-center"><h1><i class="fa-solid fa-circle-notch fa-spin" style="color: goldenrod;"></i></h1></div>';
       setTimeout(() => {
         panel.innerHTML =
-          '<div class="text-center"><h1 class="py-3" style="color: goldenrod; font-weight: bold">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Enviaremos los detalles a tu correo.</h3></div>';
+          '<div class="text-center" style="padding: 4.45%;"><h1 style="color: goldenrod; font-weight: bold">¡Cuenta creada con éxito!</h1><br><h6>Enviaremos los detalles a tu correo.</h6></div>';
       }, 1500);
     } else {
       Swal.fire({
