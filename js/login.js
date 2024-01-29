@@ -40,13 +40,18 @@ function login() {
 
   document
     .getElementById("forgotPassword")
-    .addEventListener("click", function () {
-      Swal.fire({
-        title: "Lo sentimos",
-        text: "Esta función no se encuentra disponible.",
-        icon: "error",
-        heightAuto: false,
+    .addEventListener("click", async function () {
+      const { value: email } = await Swal.fire({
+        title: "Olvidé mi contraseña",
+        input: "email",
+        inputPlaceholder: "Ingresa tu correo electrónico",
       });
+
+      if (email) {
+        Swal.fire(
+          "Correo enviado, sigue los pasos para recuperar la contraseña."
+        );
+      }
     });
 }
 
