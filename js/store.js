@@ -52,10 +52,10 @@ function sessionClose() {
       text: "¿Estás seguro?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "goldenrod",
+      cancelButtonColor: "indianred",
       confirmButtonText: "Sí, cerrar sesión",
-      cancelButtonText: "No",
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem("userData");
@@ -101,6 +101,7 @@ function setupDynamicButton(buttonId) {
       text: 'Tenés un 20% de descuento en tu primera compra utilizando el código "20DESCUENTO"',
       icon: "success",
       confirmButtonText: "¡Gracias!",
+      confirmButtonColor: "goldenrod",
     });
   });
 }

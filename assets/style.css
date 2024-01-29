@@ -113,6 +113,13 @@ button {
   cursor: pointer;
 }
 
+.swal2-default-outline:focus,
+.swal2-input:focus,
+.swal2-confirm:focus,
+.swal2-styled:focus {
+  box-shadow: none !important;
+}
+
 .cartMenu {
   background-color: seagreen;
   padding: 15px;

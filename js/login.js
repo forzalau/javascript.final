@@ -33,6 +33,8 @@ function login() {
         title: "Error en el inicio de sesión",
         text: "Los datos son incorrectos.",
         icon: "error",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "goldenrod",
         heightAuto: false,
       });
     }
@@ -42,9 +44,14 @@ function login() {
     .getElementById("forgotPassword")
     .addEventListener("click", async function () {
       const { value: email } = await Swal.fire({
+        showCancelButton: true,
         title: "Olvidé mi contraseña",
         input: "email",
         inputPlaceholder: "Ingresa tu correo electrónico",
+        confirmButtonText: "Enviar",
+        confirmButtonColor: "goldenrod",
+        cancelButtonText: "Cancelar",
+        cancelButtonColor: "indianred",
       });
 
       if (email) {
@@ -82,13 +89,15 @@ function signup() {
         '<div class="text-center"><h1><i class="fa-solid fa-circle-notch fa-spin" style="color: goldenrod;"></i></h1></div>';
       setTimeout(() => {
         panel.innerHTML =
-          '<div class="text-center"><h1 class="py-3" style="color: seagreen; font-weight: bold">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Enviaremos los detalles a tu correo.</h3></div>';
-      }, 2000);
+          '<div class="text-center"><h1 class="py-3" style="color: goldenrod; font-weight: bold">¡Cuenta creada con éxito!</h1><br><h3 class="py-2">Enviaremos los detalles a tu correo.</h3></div>';
+      }, 1500);
     } else {
       Swal.fire({
         title: "Error",
         text: "Las contraseñas no coinciden.",
         icon: "error",
+        confirmButtonText: "Ok",
+        confirmButtonColor: "goldenrod",
         heightAuto: false,
       });
     }
