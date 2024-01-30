@@ -49,7 +49,6 @@ function sessionClose() {
   function logout() {
     Swal.fire({
       title: "Cerrar sesión",
-      text: "¿Estás seguro?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "goldenrod",
