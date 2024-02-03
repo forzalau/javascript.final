@@ -167,6 +167,29 @@ button {
   color: seagreen;
 }
 
+.sticky-box {
+  background-color: goldenrod;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.sticky {
+  animation: sticky 3s infinite;
+}
+
+@keyframes sticky {
+  0% {
+    box-shadow: 0 0 1px 0px goldenrod;
+  }
+  50% {
+    box-shadow: 0 0 8px 1px goldenrod;
+  }
+  100% {
+    box-shadow: 0 0 1px 0px goldenrod;
+  }
+}
+
 footer {
   background-color: #252525;
   padding: 15px;
