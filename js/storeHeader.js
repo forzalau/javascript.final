@@ -70,7 +70,7 @@ storeCheckAuthentication();
 storeHeader();
 sessionClose();
 
-function setupCartButton(buttonId) {
+function verCartButton(buttonId) {
   const cartButton = document.getElementById(buttonId);
   const cartShow = document.getElementById("cartShow");
 
@@ -88,10 +88,10 @@ function setupCartButton(buttonId) {
   });
 }
 
-setupCartButton("cartButton");
-setupCartButton("cartButtonMobile");
+verCartButton("cartButton");
+verCartButton("cartButtonMobile");
 
-function setupDynamicButton(buttonId) {
+function verNotificacionButton(buttonId) {
   const button = document.getElementById(buttonId);
 
   button.addEventListener("click", () => {
@@ -103,8 +103,8 @@ function setupDynamicButton(buttonId) {
   });
 }
 
-setupDynamicButton("notificationButton");
-setupDynamicButton("notificationButtonMobile");
+verNotificacionButton("notificationButton");
+verNotificacionButton("notificationButtonMobile");
 
 const menuButton = document.getElementById("menuMobile");
 const dropdownMenu = document.getElementById("menuDropdown");

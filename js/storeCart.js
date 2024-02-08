@@ -196,14 +196,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   finalizarCompraBoton.addEventListener("click", function () {
-    if (carrito.length === 0) {
-      compraGracias.innerHTML = `<div style="padding: 50px 0 50px 0";><h4>Lo sentimos, no se puede finalizar la compra con el carrito vacío.</h4></div>`;
-    } else {
-      compraGracias.innerHTML = `<div style="padding: 50px 0 50px 0";><h4>¡Gracias por tu compra!</h4><br><h5>Enviaremos los detalles a tu correo.</h5></div>`;
-    }
-    finalizarCompraBoton.style.display = "none";
+    compraGracias.innerHTML = `<div class="text-center" style="padding: 50px 0 50px 0";><h1><i class="fa-solid fa-circle-notch fa-spin" style="color: mediumseagreen;"></i></h1></div>`;
     setTimeout(function () {
-      location.reload();
-    }, 5000);
+      if (carrito.length === 0) {
+        compraGracias.innerHTML = `<div style="padding: 50px 0 50px 0";><h4>Lo sentimos, no se puede finalizar la compra con el carrito vacío.</h4></div>`;
+      } else {
+        compraGracias.innerHTML = `<div style="padding: 50px 0 50px 0";><h4>¡Gracias por tu compra!</h4><br><h5>Enviaremos los detalles a tu correo.</h5></div>`;
+      }
+      finalizarCompraBoton.style.display = "none";
+      setTimeout(function () {
+        location.reload();
+      }, 5000);
+    }, 1500);
   });
 });
