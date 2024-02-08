@@ -5,7 +5,7 @@ let cartHTML = `
   <hr>
   <div id="compraGracias" class="text-center">
     <div class="carrito-bg d-flex flex-column align-items-center text-start">
-      <div id="carrito" class="w-50 text-center p-3" style="background-color: mediumseagreen; border-radius: 5px;">Tu carrito está vacío.</div><br>
+      <div id="carrito" class="w-75 text-center p-3" style="background-color: mediumseagreen; border-radius: 5px;">Tu carrito está vacío.</div><br>
       <h5 id="total" class="w-auto text-center p-3" style="background-color: mediumseagreen; border-radius: 5px;">Total: $ 0</h5>
       </div>
       <hr>
