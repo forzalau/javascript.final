@@ -19,9 +19,8 @@ let storeHeaderHTML = `
         <button id="cartButton" class="btn-menu me-1">
           <i class="fa-solid fa-cart-shopping"></i>
         </button>
-        <button id="logOut" class="btn-menu me-1" style="padding: 5px 10px">
-          <i class="fa-solid fa-user me-1"></i>
-          <i>username</i>
+        <button id="logOut" class="btn-menu me-1">
+          <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
       <button id="menuMobile" class="btn-menu">
@@ -35,7 +34,7 @@ let storeHeaderHTML = `
     <div class="text-center">
       <p id="notificationButtonMobile" class="menu-mobile-button">Notificaciones</p>
       <p id="cartButtonMobile" class="menu-mobile-button">Ver Carrito</p>
-      <p id="logOutMobile" class="menu-mobile-button">UserName</p>
+      <p id="logOutMobile" class="menu-mobile-button">Cerrar sesión</p>
     </div>
   </div>
 `;
@@ -48,7 +47,7 @@ function storeHeader() {
 function sessionClose() {
   function logout() {
     Swal.fire({
-      title: "Cerrar sesión",
+      title: "Estás por cerrar tu sesión",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "goldenrod",
@@ -97,7 +96,7 @@ function setupDynamicButton(buttonId) {
 
   button.addEventListener("click", () => {
     Swal.fire({
-      text: 'Tenés un 20% de descuento en tu primera compra utilizando el código "20DESCUENTO"',
+      text: 'Tenés un 20% de descuento en el total de tu primera compra utilizando el código: "20DESCUENTO"',
       confirmButtonText: "¡Gracias!",
       confirmButtonColor: "goldenrod",
     });

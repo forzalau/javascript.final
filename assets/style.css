@@ -77,6 +77,14 @@ input[type="checkbox"]:checked {
   background-color: goldenrod;
 }
 
+.form-control:focus {
+  color: none;
+  background-color: none;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+
 button {
   background-color: #303030;
   color: white;
@@ -85,6 +93,22 @@ button {
   padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+
+.btn-carrito {
+  background-color: #303030;
+  width: auto;
+  padding: 0 10px 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .btn-menu {
@@ -156,38 +180,16 @@ button {
   margin-bottom: 15px;
 }
 
-.offert-box {
-  background-color: seagreen;
+#alerta {
+  background-color: rgba(46, 139, 86, 0.8);
   color: white;
-  padding: 2px 5px;
+  padding: 15px;
   border-radius: 5px;
-}
-
-.offer {
-  color: seagreen;
-}
-
-.sticky-box {
-  background-color: goldenrod;
-  color: white;
-  padding: 2px 5px;
-  border-radius: 5px;
-}
-
-.sticky {
-  animation: sticky 3s infinite;
-}
-
-@keyframes sticky {
-  0% {
-    box-shadow: 0 0 1px 0px goldenrod;
-  }
-  50% {
-    box-shadow: 0 0 8px 1px goldenrod;
-  }
-  100% {
-    box-shadow: 0 0 1px 0px goldenrod;
-  }
+  bottom: 15px;
+  right: 15px;
+  position: fixed;
+  z-index: 1;
+  display: none;
 }
 
 footer {
